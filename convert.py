@@ -19,7 +19,7 @@ def main():
         print("正在转换文件格式...")
         domains = []
         # 使用正则表达式匹配 server=/.domain.com/ 格式的域名
-        pattern = re.compile(r'server=/\.(.*?)/')
+        pattern = re.compile(r'server=/([^/]+)/')
         for line in content.splitlines():
             match = pattern.search(line)
             if match:
